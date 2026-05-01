@@ -33,9 +33,9 @@ export default function GmailMock() {
         id: 'e1',
         from: 'Acme Inc.',
         fromEmail: 'hr@acme.com',
-        subject: 'Help Acme Inc. evaluate our AI Readiness!',
+        subject: 'Help Acme Inc. evaluate our AI Adoption!',
         preview:
-          'Dear Sarah, Acme is currently assessing our AI readiness across our organization...',
+          'Hi Sarah, we\'re taking a look at how our team is adopting AI tools — what\'s working, where people feel confident...',
         time: 'May 1',
         unread: true,
         selected: true,
@@ -506,7 +506,7 @@ export default function GmailMock() {
           </div>
 
           <div className="nav-list">
-            <div className="nav-item active" role="button" tabIndex={0}>
+            <div className="nav-item active" role="button" tabIndex={0} onClick={() => setView('inbox')} onKeyDown={e => e.key === 'Enter' && setView('inbox')}>
               <span className="material-symbols-outlined" aria-hidden style={{ color: '#1a73e8' }}>inbox</span>
               <span className="nav-label">Inbox</span>
               <span className="nav-count">3</span>
@@ -887,7 +887,21 @@ export default function GmailMock() {
               id="evBody"
               style={{ padding: '24px 40px', background: '#f6f8fc' }}
             >
-              <div
+              {selectedId === 'e2' && (
+                <div style={{ maxWidth: 680, margin: '0 auto', background: '#fff', fontFamily: 'Arial, sans-serif', fontSize: 15, color: '#1a1a1a', lineHeight: 1.6, padding: '32px' }}>
+                  <p style={{ margin: '0 0 16px' }}>Hi Sarah,</p>
+                  <p style={{ margin: '0 0 16px' }}>Following up on our conversation last week — I wanted to share a quick update on the Meridian account expansion before our call on Thursday.</p>
+                  <p style={{ margin: '0 0 16px' }}>The Enterprise Tier proposal is nearly finalized. A few things I'd love your input on before we send it over:</p>
+                  <ul style={{ margin: '0 0 16px', paddingLeft: 20 }}>
+                    <li style={{ marginBottom: 8 }}>Seat count — they mentioned 200 initially but hinted at 250+. Do we present a range or lock in a number?</li>
+                    <li style={{ marginBottom: 8 }}>Onboarding timeline — their IT team flagged a 6-week lead time. Can we accommodate?</li>
+                    <li style={{ marginBottom: 8 }}>Pricing — are we still holding at the Q1 rate or do we apply the Q2 adjustment?</li>
+                  </ul>
+                  <p style={{ margin: '0 0 16px' }}>Let me know if you want to hop on a quick call before Thursday to align. Happy to make time tomorrow morning.</p>
+                  <p style={{ margin: 0 }}>Best,<br /><strong>Marcus</strong></p>
+                </div>
+              )}
+              {selectedId !== 'e2' && <><div
                 style={{
                   maxWidth: 680,
                   margin: '0 auto',
@@ -974,7 +988,7 @@ export default function GmailMock() {
                       <svg width="16" height="16" viewBox="0 0 24 24" aria-hidden="true">
                         <path d="M12 2L8 8H2l5 4-2 7 7-5 7 5-2-7 5-4h-6z" fill="#9C27B0" />
                       </svg>
-                      John (AI Coach)
+                      John (AI Interviewer)
                     </span>
                     <span style={{ display: 'flex', alignItems: 'center', gap: 6 }}>
                       <svg width="16" height="16" viewBox="0 0 24 24" aria-hidden="true">
@@ -984,8 +998,8 @@ export default function GmailMock() {
                     </span>
                   </div>
                   <p style={{ margin: '0 0 24px', fontSize: 14, color: '#333' }}>
-                    This AI Coach interview will evaluate how you use AI tools to perform your work tasks through a series of questions.
-                    Your responses will help us understand your current AI readiness and identify opportunities for skill development.
+                    This interview will evaluate how you use AI tools to perform your work tasks through a series of questions.
+                    Your responses will help us understand your current AI adoption and identify opportunities for skill development.
                   </p>
                   <div style={{ display: 'flex', gap: 12, marginBottom: 24, flexWrap: 'wrap' }}>
                     <button style={{ display: 'flex', alignItems: 'center', gap: 8, background: '#b2ebf2', border: 'none', borderRadius: 20, padding: '10px 20px', fontSize: 14, fontWeight: 600, color: '#006064', cursor: 'pointer' }}>
@@ -1124,7 +1138,7 @@ export default function GmailMock() {
                   <span className="material-symbols-outlined" style={{ fontSize: 18 }} aria-hidden>chat_bubble_outline</span>
                   Share in chat
                 </button>
-              </div>
+              </div></>}
             </div>
           </div>
         </div>
