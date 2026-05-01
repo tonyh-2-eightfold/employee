@@ -36,7 +36,7 @@ export default function GmailMock() {
         subject: 'Help Acme Inc. evaluate our AI Readiness!',
         preview:
           'Dear Sarah, Acme is currently assessing our AI readiness across our organization...',
-        time: 'Mar 30',
+        time: 'May 1',
         unread: true,
         selected: true,
         star: false,
@@ -865,7 +865,7 @@ export default function GmailMock() {
               <div className="ev-from-right">
                 <span className="material-symbols-outlined" style={{ fontSize: 18, color: '#5f6368', fontVariationSettings: "'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 20" }} aria-hidden>attach_file</span>
                 <div className="ev-timestamp">
-                  <span>Mon, Mar 30, 9:00 AM</span>
+                  <span>Thu, May 1, 9:00 AM</span>
                 </div>
                 <button className="ev-icon-btn" type="button" aria-label="Star">
                   <span className="material-symbols-outlined" style={{ fontSize: 20, color: '#dadce0', fontVariationSettings: "'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 20" }} aria-hidden>star</span>
@@ -960,31 +960,31 @@ export default function GmailMock() {
                 <div style={{ padding: '16px 32px 24px' }}>
                   <p style={{ margin: '0 0 12px' }}>Hi Sarah,</p>
                   <p style={{ margin: '0 0 12px' }}>
-                    Your team is building a development plan to help everyone get more comfortable with AI tools. To create yours, we need to understand which tools you're already using and how confident you feel.
+                    We're taking a look at how our team is adopting AI tools — what's working, where people feel confident, and where there's room to grow. Your input helps us get a clear picture of where we are as an organization.
                   </p>
                   <p style={{ margin: 0 }}>
-                    This is a conversation – not a test. Your answers are used only to shape your personal plan. No scores are shared with your manager.
+                    This is a quick, friendly chat — not a test. Your answers go toward understanding our overall readiness, not evaluating you individually. Nothing is shared with your manager.
                   </p>
                 </div>
 
                 <div style={{ margin: '0 32px 24px', border: '1px solid #e0e0e0', borderRadius: 12, padding: 24 }}>
-                  <div style={{ fontSize: 18, fontWeight: 700, marginBottom: 10 }}>AI readiness assessment</div>
+                  <div style={{ fontSize: 18, fontWeight: 700, marginBottom: 10 }}>AI adoption assessment</div>
                   <div style={{ display: 'flex', alignItems: 'center', gap: 24, marginBottom: 20, fontSize: 14, color: '#444' }}>
                     <span style={{ display: 'flex', alignItems: 'center', gap: 6 }}>
                       <svg width="16" height="16" viewBox="0 0 24 24" aria-hidden="true">
                         <path d="M12 2L8 8H2l5 4-2 7 7-5 7 5-2-7 5-4h-6z" fill="#9C27B0" />
                       </svg>
-                      James (AI agent)
+                      John (AI Coach)
                     </span>
                     <span style={{ display: 'flex', alignItems: 'center', gap: 6 }}>
                       <svg width="16" height="16" viewBox="0 0 24 24" aria-hidden="true">
                         <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 15c-.55 0-1-.45-1-1V8c0-.55.45-1 1-1s1 .45 1 1v7h4c.55 0 1 .45 1 1s-.45 1-1 1h-5z" fill="#5f6368" />
                       </svg>
-                      45 mins (estimated)
+                      25 mins (estimated)
                     </span>
                   </div>
                   <p style={{ margin: '0 0 24px', fontSize: 14, color: '#333' }}>
-                    This AI agent interview will evaluate how you use AI tools to perform your work tasks through a series of questions.
+                    This AI Coach interview will evaluate how you use AI tools to perform your work tasks through a series of questions.
                     Your responses will help us understand your current AI readiness and identify opportunities for skill development.
                   </p>
                   <div style={{ display: 'flex', gap: 12, marginBottom: 24, flexWrap: 'wrap' }}>
@@ -992,7 +992,7 @@ export default function GmailMock() {
                       <svg width="16" height="16" viewBox="0 0 24 24" aria-hidden="true">
                         <path d="M17 10.5V7c0-.55-.45-1-1-1H4c-.55 0-1 .45-1 1v10c0 .55.45 1 1 1h12c.55 0 1-.45 1-1v-3.5l4 4v-11l-4 4z" fill="#006064" />
                       </svg>
-                      Start my AI check-in
+                      Get started now
                     </button>
                     <button style={{ display: 'flex', alignItems: 'center', gap: 8, background: '#fff', border: '1px solid #ccc', borderRadius: 20, padding: '10px 20px', fontSize: 14, color: '#333', cursor: 'pointer' }}>
                       <svg width="16" height="16" viewBox="0 0 24 24" aria-hidden="true">
@@ -1006,7 +1006,7 @@ export default function GmailMock() {
                       <svg width="14" height="14" viewBox="0 0 24 24" aria-hidden="true">
                         <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z" fill="#888" />
                       </svg>
-                      Link expires 11:59 PM CDT Apr 06, 2026
+                      Link expires 11:59 PM CDT May 15, 2026
                     </span>
                     <a href="#" style={{ color: '#1a73e8', textDecoration: 'none', fontWeight: 500 }}>
                       More options
@@ -1055,8 +1055,8 @@ export default function GmailMock() {
 
                   <div
                     style={{
-                      width: 160,
-                      height: 120,
+                      width: 170,
+                      height: 128,
                       borderRadius: 8,
                       flexShrink: 0,
                       display: 'flex',
@@ -1070,9 +1070,12 @@ export default function GmailMock() {
                       src={tipsThumbnail}
                       alt="Interview preview"
                       style={{
+                        position: 'absolute',
+                        inset: 0,
                         width: '100%',
                         height: '100%',
                         objectFit: 'cover',
+                        objectPosition: 'center center',
                         display: 'block',
                       }}
                     />
